@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創思優語 115暑期營隊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+        .camp-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 8px solid transparent;
+        }
+        .camp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        /* 依據您的要求，確保配色豐富且不重複 */
+        .color-1 { border-color: #fca5a5; background-color: #fff1f1; } /* 珊瑚粉 */
+        .color-2 { border-color: #7dd3fc; background-color: #f0f9ff; } /* 天空藍 */
+        .color-3 { border-color: #fcd34d; background-color: #fffbeb; } /* 琥珀黃 */
+        .color-4 { border-color: #c084fc; background-color: #faf5ff; } /* 薰衣草紫 */
+        .color-5 { border-color: #94a3b8; background-color: #f1f5f9; } /* 公益灰藍 */
+        .color-6 { border-color: #4ade80; background-color: #f0fdf4; } /* 薄荷綠 */
+        .color-7 { border-color: #fb923c; background-color: #fff7ed; } /* 活力橙 */
+        
+        .badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
+        <!-- Header Area -->
+        <div class="hero-gradient p-8 text-white text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-xl md:text-2xl font-bold opacity-90 mb-2">2026 創思優語</h2>
+                <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">
+                    115 暑期營隊 <span class="text-yellow-300">盛大招生</span>
+                </h1>
+                <p class="text-lg opacity-80">讓孩子在探索中發現天賦，在創意中實踐未來</p>
+            </div>
+            <!-- Decorative circle -->
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+            <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-yellow-300 opacity-20 rounded-full"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="p-6 md:p-10 space-y-6">
+            
+            <!-- Camp 1 -->
+            <div class="camp-card color-1 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-red-500 font-black text-lg block">第一梯次</span>
+                    <span class="text-gray-600 font-bold">7/1 - 7/3</span>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">安心陪伴與桌遊營</h3>
+                    <p class="text-gray-600 mb-3">涵蓋自我探索、生物演化、數學策略。含暑期作業指導，最後一天安排<span class="text-red-500 font-bold">烘焙課程</span>。</p>
+                    <div class="flex items-center gap-2">
+                        <span class="badge bg-red-100 text-red-600">適合對象：小三以上</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp 2 -->
+            <div class="camp-card color-2 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-blue-500 font-black text-lg block">第二梯次</span>
+                    <span class="text-gray-600 font-bold">7/6 - 7/10</span>
+                </div>
+                <div class="md:w-3/4 flex justify-between items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">財商探險家-勇闖企鵝島</h3>
+                        <p class="text-gray-600 mb-3">透過沉浸式情境培養孩子的金錢邏輯與創業家精神。</p>
+                        <div class="flex items-center gap-2">
+                            <span class="badge bg-blue-100 text-blue-600">適合對象：升小五以上 (升小四可評估)</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:block opacity-20">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp 3 -->
+            <div class="camp-card color-3 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-amber-600 font-black text-lg block">第三梯次</span>
+                    <span class="text-gray-600 font-bold">7/13 - 7/17</span>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">語文好好玩與黏土動畫營</h3>
+                    <p class="text-gray-600 mb-3">結合文學敘事與動手捏塑，製作屬於自己的停格動畫作品。</p>
+                    <div class="flex items-center gap-2">
+                        <span class="badge bg-amber-100 text-amber-600">適合對象：升小三以上</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp 4 -->
+            <div class="camp-card color-4 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-purple-600 font-black text-lg block">第四梯次</span>
+                    <span class="text-gray-600 font-bold">7/27 - 7/31</span>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">媒體識讀與議題探究營</h3>
+                    <p class="text-gray-600 mb-2">模擬聯合國形式，培養國際觀、思辨力與訊息查核能力。</p>
+                    <div class="flex items-center gap-2">
+                        <span class="badge bg-purple-100 text-purple-600">適合對象：升小五以上</span>
+                        <span class="text-xs text-purple-400 font-bold">#模擬聯合國</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp 5 -->
+            <div class="camp-card color-5 p-6 rounded-2xl border-dashed opacity-75">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="text-gray-500 font-black text-lg block">第五梯次</span>
+                        <h3 class="text-xl font-bold text-gray-400 italic">公益營隊 - 即將公告</h3>
+                    </div>
+                    <div class="text-gray-300 font-bold text-sm tracking-widest">COMING SOON</div>
+                </div>
+            </div>
+
+            <!-- Camp 6 -->
+            <div class="camp-card color-6 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-green-600 font-black text-lg block">第六梯次</span>
+                    <span class="text-gray-600 font-bold">日期依各梯公告</span>
+                </div>
+                <div class="md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-xl border border-green-100">
+                        <h4 class="font-bold text-green-700">☀️ 上午｜植感實驗室</h4>
+                        <p class="text-xs text-gray-500">我的第一本植物解碼書</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-xl border border-green-100">
+                        <h4 class="font-bold text-green-700">🌙 下午｜「智」能探索營</h4>
+                        <p class="text-xs text-gray-500">AI x 時間管理 x 情緒偵探社</p>
+                    </div>
+                    <div class="col-span-1 md:col-span-2">
+                        <span class="badge bg-green-100 text-green-600">適合對象：升小四以上</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camp 7 -->
+            <div class="camp-card color-7 p-6 rounded-2xl flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                    <span class="text-orange-500 font-black text-lg block">第七梯次</span>
+                    <span class="text-gray-600 font-bold">日期依各梯公告</span>
+                </div>
+                <div class="md:w-3/4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">科學探究營-微生物的世界</h3>
+                    <p class="text-gray-600 mb-3">揭開微觀世界的神秘面紗，培養科學觀察與實驗精神。</p>
+                    <div class="flex items-center gap-2">
+                        <span class="badge bg-orange-100 text-orange-600">適合對象：升小四以上</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Footer -->
+        <div class="bg-slate-900 p-8 text-white">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h4 class="text-2xl font-black mb-1">創思優語 <span class="text-indigo-400 italic">CREATIVE VOICE</span></h4>
+                    <p class="text-sm text-gray-400">專業素養培力．成就無限可能</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-sm mb-2">掃描 QR Code 立即報名或諮詢</p>
+                    <div class="w-24 h-24 bg-white p-1 rounded-lg">
+                        <div class="w-full h-full border-2 border-slate-900 flex items-center justify-center text-slate-900 text-[10px] font-bold text-center">
+                            QR CODE<br>PLACEHOLDER
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-xs text-gray-500">
+                &copy; 2026 創思優語 版權所有 | 地點：[合作教室：Y2藝享空間] | Email：[csyy2024.edu@gmail.com]
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button for Mobile -->
+    <a href="#" class="fixed bottom-6 right-6 bg-indigo-600 text-white p-4 rounded-full shadow-xl font-bold md:hidden">
+        立即報名
+    </a>
+
+</body>
+</html>
