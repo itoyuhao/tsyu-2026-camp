@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>創思優語 115暑期營隊</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -18,12 +19,17 @@
         body {
             font-family: 'Noto Sans TC', sans-serif;
             background-color: var(--brand-cream);
-            /* 童趣感的點點背景 */
-            background-image: radial-gradient(rgba(106, 152, 161, 0.15) 2px, transparent 2px);
-            background-size: 30px 30px;
+            margin: 0;
+            padding: 0;
         }
 
-        /* 活潑的浮動動畫 */
+        #capture-area {
+            background-color: var(--brand-cream);
+            background-image: radial-gradient(rgba(106, 152, 161, 0.15) 2px, transparent 2px);
+            background-size: 30px 30px;
+            min-height: 100vh;
+        }
+
         @keyframes float {
             0% {
                 transform: translateY(0px) rotate(0deg);
@@ -59,7 +65,6 @@
             box-shadow: 0 15px 30px -5px rgba(106, 152, 161, 0.2);
         }
 
-        /* 依據您的要求，確保配色豐富、不重複，並使用品牌色系 */
         .color-1 {
             border-color: var(--brand-salmon);
         }
@@ -82,7 +87,6 @@
             border-left-width: 4px;
         }
 
-        /* 公益灰 */
         .color-6 {
             border-color: var(--brand-teal);
         }
@@ -91,7 +95,6 @@
             border-color: var(--brand-yellow);
         }
 
-        /* 專屬 Badge 顏色 */
         .badge {
             font-size: 0.75rem;
             padding: 4px 12px;
@@ -119,7 +122,6 @@
             color: #64748b;
         }
 
-        /* 圓潤的頂部設計 */
         .hero-section {
             background-color: #375374;
             border-radius: 2rem 2rem 4rem 4rem;
@@ -127,232 +129,251 @@
     </style>
 </head>
 
-<body class="p-4 md:p-8 relative">
+<body>
 
-    <!-- 背景裝飾小元素 (散落於主容器外) -->
-    <div class="fixed top-20 left-10 text-5xl opacity-20 floating-icon hidden lg:block">🌱</div>
-    <div class="fixed top-1/3 right-12 text-6xl opacity-20 floating-icon-delay hidden lg:block">💡</div>
-    <div class="fixed bottom-32 left-16 text-5xl opacity-20 floating-icon hidden lg:block">🐧</div>
-    <div class="fixed bottom-1/4 right-20 text-5xl opacity-20 floating-icon-delay hidden lg:block">💬</div>
+    <div id="capture-area" class="relative p-4 md:p-8 w-full overflow-hidden">
 
-    <div
-        class="max-w-4xl mx-auto bg-white/60 shadow-xl rounded-[2.5rem] border-[3px] border-white backdrop-blur-md overflow-hidden relative z-10">
+        <div class="absolute top-32 left-10 text-5xl opacity-20 floating-icon hidden lg:block">🌱</div>
+        <div class="absolute top-1/3 right-12 text-6xl opacity-20 floating-icon-delay hidden lg:block">💡</div>
+        <div class="absolute bottom-64 left-16 text-5xl opacity-20 floating-icon hidden lg:block">🐧</div>
+        <div class="absolute bottom-1/4 right-20 text-5xl opacity-20 floating-icon-delay hidden lg:block">💬</div>
 
-        <!-- Header Area -->
-        <div class="hero-section p-10 md:p-14 text-white text-center relative overflow-hidden shadow-sm m-2">
-            <!-- 童趣裝飾圖案 -->
-            <div class="absolute top-4 left-6 text-4xl opacity-40 -rotate-12 floating-icon">🎨</div>
-            <div class="absolute bottom-6 left-12 text-5xl opacity-40 rotate-12 floating-icon-delay">🪙</div>
-            <div class="absolute top-8 right-10 text-4xl opacity-40 rotate-12 floating-icon">🔬</div>
-            <div class="absolute bottom-8 right-8 text-5xl opacity-40 -rotate-6 floating-icon-delay">📚</div>
+        <div
+            class="max-w-4xl mx-auto bg-white/60 shadow-xl rounded-[2.5rem] border-[3px] border-white backdrop-blur-md overflow-hidden relative z-10">
 
-            <div class="relative z-10">
-                <div
-                    class="inline-block bg-[#ffe596] text-black font-black px-6 py-2 rounded-full mb-6 transform -rotate-2 shadow-sm text-sm md:text-base">
-                    2026 創思優語
-                </div>
-                <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-[#f8f9f3] drop-shadow-md">
-                    115 暑期營隊 <span class="text-[#fbc008] block md:inline mt-2 md:mt-0">盛大招生</span>
-                </h1>
-                <p class="text-lg md:text-xl font-bold opacity-90 mt-4 text-[#f8f9f3]">
-                    讓孩子在探索中發現天賦，在創意中實踐未來 ✨
-                </p>
-            </div>
-        </div>
+            <div class="hero-section p-10 md:p-14 text-white text-center relative overflow-hidden shadow-sm m-2">
+                <div class="absolute top-4 left-6 text-4xl opacity-40 -rotate-12 floating-icon">🎨</div>
+                <div class="absolute bottom-6 left-12 text-5xl opacity-40 rotate-12 floating-icon-delay">🪙</div>
+                <div class="absolute top-8 right-10 text-4xl opacity-40 rotate-12 floating-icon">🔬</div>
+                <div class="absolute bottom-8 right-8 text-5xl opacity-40 -rotate-6 floating-icon-delay">📚</div>
 
-        <!-- Main Content -->
-        <div class="p-4 md:p-8 space-y-6">
-
-            <!-- Camp 1 (紅) -->
-            <div class="camp-card color-1 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#dd907b] font-black text-xl block mb-1">第一梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/1
-                        - 7/3</span>
-                </div>
-                <div class="md:w-3/4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                        安心陪伴與桌遊營（三日） 🎲
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">涵蓋自我探索、生物演化、數學策略。含暑期作業指導，最後一天預計安排<span
-                            class="text-[#dd907b] font-bold border-b-2 border-[#dd907b]">烘焙課程 🧁</span>。</p>
-                    <div class="flex items-center gap-2">
-                        <span class="badge badge-salmon">適合對象：升小三以上</span>
+                <div class="relative z-10">
+                    <div
+                        class="inline-block bg-[#ffe596] text-black font-black px-6 py-2 rounded-full mb-6 transform -rotate-2 shadow-sm text-sm md:text-base">
+                        2026 創思優語
                     </div>
+                    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-[#f8f9f3] drop-shadow-md">
+                        115 暑期營隊 <span class="text-[#fbc008] block md:inline mt-2 md:mt-0">盛大招生</span>
+                    </h1>
+                    <p class="text-lg md:text-xl font-bold opacity-90 mt-4 text-[#f8f9f3]">
+                        讓孩子在探索中發現天賦，在創意中實踐未來 ✨
+                    </p>
                 </div>
             </div>
 
-            <!-- Camp 2 (藍綠) -->
-            <div class="camp-card color-2 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#6a98a1] font-black text-xl block mb-1">第二梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/6
-                        - 7/10</span>
-                </div>
-                <div class="md:w-3/4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2 flex flex-wrap items-center gap-2">
-                        財商探險家-勇闖企鵝島（初階班）🐧
-                        <span class="text-sm font-bold text-[#6a98a1]">｜開放舊生複訓（2名）/ 享半價優惠 /｜</span>
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        透過家瑀老師與健平老師共同設計的策略桌遊與搭配安排沉浸式情境，培養孩子的金錢邏輯、規劃財務藍圖，並建立風險意識與資產管理能力。</p>
-                    <div class="flex items-center gap-2">
-                        <span class="badge badge-teal">適合對象：升小五以上 (升小四可評估)</span>
+            <div class="p-4 md:p-8 space-y-6">
+
+                <div class="camp-card color-1 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#dd907b] font-black text-xl block mb-1">第一梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/1
+                            - 7/3</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- Camp 3 (黃) -->
-            <div class="camp-card color-3 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#b38800] font-black text-xl block mb-1">第三梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/13
-                        - 7/17</span>
-                </div>
-                <div class="md:w-3/4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                        語文好好玩與黏土動畫營 🎬
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">踏上語文探索的奇幻旅程，結合文學敘事與動手捏塑，引導孩子親手製作屬於自己的停格動畫作品。</p>
-                    <div class="flex items-center gap-2">
-                        <span class="badge badge-yellow">適合對象：升小三以上</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Camp 4 (紅) -->
-            <div class="camp-card color-4 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#dd907b] font-black text-xl block mb-1">第四梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/27
-                        - 7/31</span>
-                </div>
-                <div class="md:w-3/4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                        媒體識讀與議題探究營 🌍
-                    </h3>
-                    <p class="text-gray-600 mb-3 leading-relaxed">模擬聯合國形式，培養媒體識讀、國際觀、深度思辨力與現代必備的訊息查核能力。</p>
-                    <div class="flex flex-wrap items-center gap-2">
-                        <span class="badge badge-salmon">適合對象：升小五以上（升小四可評估）</span>
-                        <span class="badge bg-white text-[#dd907b] border border-[#dd907b]">#模擬聯合國</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Camp 5 (灰 - 公益) -->
-            <div class="camp-card color-5 p-6 bg-white/40">
-                <div class="flex justify-between items-center">
-                    <div>
-                        <span class="text-gray-400 font-black text-lg block mb-1">第五梯次</span>
-                        <h3 class="text-xl font-bold text-gray-500 flex items-center gap-2">
-                            公益營隊 💝 <span class="text-sm font-normal bg-gray-200 px-2 py-1 rounded-md">8/3-8/7</span>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                            安心陪伴與桌遊營（三日） 🎲
                         </h3>
-                    </div>
-                    <div class="text-gray-300 font-black text-2xl opacity-50 tracking-widest hidden md:block">COMING
-                        SOON</div>
-                </div>
-            </div>
-
-            <!-- Camp 6 (藍綠) -->
-            <div class="camp-card color-6 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#6a98a1] font-black text-xl block mb-1">第六梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">8/10-8/14</span>
-                </div>
-                <div class="md:w-3/4">
-                    <div class="mb-5 space-y-5">
-                        <!-- 上午場 -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                                ☀️ 上午｜植感實驗室-我的第一本植物解碼書 🌿
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">帶領孩子走入自然，透過實作與觀察解開植物生長的奧秘，培養自然觀察者素養，並製作專屬的觀察解碼書。
-                            </p>
-                        </div>
-
-                        <!-- 分隔線 -->
-                        <div class="border-t-2 border-dashed border-[#6a98a1] opacity-20"></div>
-
-                        <!-- 下午場 -->
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                                🌙 下午｜「智」能探索營-AI x 時間管理 x 情緒偵探社 🤖
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">結合最新 AI 科技應用、時間規劃技巧與心理情緒覺察，全方位提升孩子的未來數位素養與自我管理能力。
-                            </p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">涵蓋自我探索、生物演化、數學策略。含暑期作業指導，最後一天預計安排<span
+                                class="text-[#dd907b] font-bold border-b-2 border-[#dd907b]">烘焙課程 🧁</span>。</p>
+                        <div class="flex items-center gap-2">
+                            <span class="badge badge-salmon">適合對象：升小三以上</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <span class="badge badge-teal">適合對象：升小四以上</span>
+                </div>
+
+                <div class="camp-card color-2 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#6a98a1] font-black text-xl block mb-1">第二梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/6
+                            - 7/10</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex flex-wrap items-center gap-2">
+                            財商探險家-勇闖企鵝島（初階班）🐧
+                            <span class="text-sm font-bold text-[#6a98a1]">｜開放舊生複訓（2名）/ 享半價優惠 /｜</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            透過家瑀老師與健平老師共同設計的策略桌遊與搭配安排沉浸式情境，培養孩子的金錢邏輯、規劃財務藍圖，並建立風險意識與資產管理能力。</p>
+                        <div class="flex items-center gap-2">
+                            <span class="badge badge-teal">適合對象：升小五以上 (升小四可評估)</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Camp 7 (黃) -->
-            <div class="camp-card color-7 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
-                <div class="md:w-1/4 flex flex-col justify-center">
-                    <span class="text-[#b38800] font-black text-xl block mb-1">第七梯次</span>
-                    <span
-                        class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">8/17-8/21</span>
-                </div>
-                <div class="md:w-3/4">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                        科學探究營-微生物的世界 🦠
-                    </h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">揭開微觀世界的神秘面紗，親手操作培養科學觀察與實驗精神。</p>
-                    <div class="flex items-center gap-2">
-                        <span class="badge badge-yellow">適合對象：升小四以上</span>
+                <div class="camp-card color-3 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#b38800] font-black text-xl block mb-1">第三梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/13
+                            - 7/17</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                            語文好好玩與黏土動畫營 🎬
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">踏上語文探索的奇幻旅程，結合文學敘事與動手捏塑，引導孩子親手製作屬於自己的停格動畫作品。</p>
+                        <div class="flex items-center gap-2">
+                            <span class="badge badge-yellow">適合對象：升小三以上</span>
+                        </div>
                     </div>
                 </div>
+
+                <div class="camp-card color-4 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#dd907b] font-black text-xl block mb-1">第四梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">7/27
+                            - 7/31</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                            媒體識讀與議題探究營 🌍
+                        </h3>
+                        <p class="text-gray-600 mb-3 leading-relaxed">模擬聯合國形式，培養媒體識讀、國際觀、深度思辨力與現代必備的訊息查核能力。</p>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-salmon">適合對象：升小五以上（升小四可評估）</span>
+                            <span class="badge bg-white text-[#dd907b] border border-[#dd907b]">#模擬聯合國</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camp 5 (灰 - 公益) 更新：調整響應式排版 -->
+                <div class="camp-card color-5 p-6 bg-white/40">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
+                        <div>
+                            <span class="text-gray-400 font-black text-lg block mb-1">第五梯次</span>
+                            <h3 class="text-xl font-bold text-gray-500 flex items-center gap-2">
+                                公益營隊 💝 <span
+                                    class="text-sm font-normal bg-gray-200 px-2 py-1 rounded-md">8/3-8/7</span>
+                            </h3>
+                        </div>
+                        <div
+                            class="text-gray-300 font-black text-lg md:text-2xl opacity-80 md:opacity-50 tracking-widest mt-1 md:mt-0">
+                            COMING SOON</div>
+                    </div>
+                </div>
+
+                <div class="camp-card color-6 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#6a98a1] font-black text-xl block mb-1">第六梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">8/10-8/14</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div class="mb-5 space-y-5">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                    ☀️ 上午｜植感實驗室-我的第一本植物解碼書 🌿
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    帶領孩子走入自然，透過實作與觀察解開植物生長的奧秘，培養自然觀察者素養，並製作專屬的觀察解碼書。</p>
+                            </div>
+
+                            <div class="border-t-2 border-dashed border-[#6a98a1] opacity-20"></div>
+
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                                    🌙 下午｜「智」能探索營-AI x 時間管理 x 情緒偵探社 🤖
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed">結合最新 AI
+                                    科技應用、時間規劃技巧與心理情緒覺察，全方位提升孩子的未來數位素養與自我管理能力。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="badge badge-teal">適合對象：升小四以上</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="camp-card color-7 p-6 flex flex-col md:flex-row gap-6 border-2 border-white shadow-sm">
+                    <div class="md:w-1/4 flex flex-col justify-center">
+                        <span class="text-[#b38800] font-black text-xl block mb-1">第七梯次</span>
+                        <span
+                            class="text-gray-500 font-bold bg-white px-3 py-1 rounded-lg inline-block border border-gray-100 w-max">8/17-8/21</span>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                            科學探究營-微生物的世界 🦠
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">揭開微觀世界的神秘面紗，親手操作培養科學觀察與實驗精神。</p>
+                        <div class="flex items-center gap-2">
+                            <span class="badge badge-yellow">適合對象：升小四以上</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
+            <div class="bg-[#375374] p-8 text-white mt-4 mx-2 mb-2 rounded-3xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#fbc008] rounded-full opacity-20"></div>
+                <div class="absolute -left-10 -top-10 w-32 h-32 bg-[#dd907b] rounded-full opacity-20"></div>
 
-        <!-- Footer Footer -->
-        <div class="bg-[#375374] p-8 text-white mt-4 mx-2 mb-2 rounded-3xl relative overflow-hidden">
-            <!-- 裝飾用圓形 -->
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-[#fbc008] rounded-full opacity-20"></div>
-            <div class="absolute -left-10 -top-10 w-32 h-32 bg-[#dd907b] rounded-full opacity-20"></div>
-
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
-                <div class="text-center md:text-left">
-                    <h4 class="text-2xl font-black mb-2 text-[#f8f9f3]">創思優語 <span
-                            class="text-[#fbc008] text-lg font-bold ml-2">CREATIVE VOICE</span></h4>
-                    <p class="text-[#375374] font-bold bg-[#ffe596] px-4 py-1 rounded-full inline-block shadow-sm">
-                        專業素養培力．成就無限可能</p>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-black mb-2 text-[#f8f9f3]">創思優語 <span
+                                class="text-[#fbc008] text-lg font-bold ml-2">CREATIVE VOICE</span></h4>
+                        <p class="text-[#375374] font-bold bg-[#ffe596] px-4 py-1 rounded-full inline-block shadow-sm">
+                            專業素養培力．成就無限可能</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center md:items-end bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
+                        <p class="text-sm mb-2 font-bold text-[#fbc008]">掃描 QR Code 立即報名或諮詢 👇</p>
+                        <div class="w-24 h-24 bg-white p-2 rounded-xl shadow-inner">
+                            <div
+                                class="w-full h-full border-2 border-dashed border-[#375374] flex items-center justify-center text-[#375374] text-xs font-bold text-center rounded-lg">
+                                報名<br>QR CODE
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div
-                    class="flex flex-col items-center md:items-end bg-white/10 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
-                    <p class="text-sm mb-2 font-bold text-[#fbc008]">掃描 QR Code 立即報名或諮詢 👇</p>
-                    <div class="w-24 h-24 bg-white p-2 rounded-xl shadow-inner">
-                        <div
-                            class="w-full h-full border-2 border-dashed border-[#375374] flex items-center justify-center text-[#375374] text-xs font-bold text-center rounded-lg">
-                            報名<br>QR CODE
-                        </div>
-                    </div>
+                    class="mt-6 pt-6 border-t border-white/20 text-center text-sm text-[#f8f9f3] opacity-80 flex flex-col md:flex-row justify-center gap-2 md:gap-6">
+                    <span>&copy; 2026 創思優語 版權所有</span>
+                    <span class="hidden md:inline">|</span>
+                    <span>📍 地點：合作教室 Y2藝享空間</span>
+                    <span class="hidden md:inline">|</span>
+                    <span>✉️ Email：csyy2024.edu@gmail.com</span>
                 </div>
-            </div>
-            <div
-                class="mt-6 pt-6 border-t border-white/20 text-center text-sm text-[#f8f9f3] opacity-80 flex flex-col md:flex-row justify-center gap-2 md:gap-6">
-                <span>&copy; 2026 創思優語 版權所有</span>
-                <span class="hidden md:inline">|</span>
-                <span>📍 地點：合作教室 Y2藝享空間</span>
-                <span class="hidden md:inline">|</span>
-                <span>✉️ Email：csyy2024.edu@gmail.com</span>
             </div>
         </div>
     </div>
 
-    <!-- Floating Action Button for Mobile -->
-    <a href="#"
-        class="fixed bottom-6 right-6 bg-[#dd907b] hover:bg-[#c0654c] transition-colors text-white px-6 py-4 rounded-full shadow-xl font-bold md:hidden z-50 flex items-center gap-2 border-2 border-white">
-        ✨ 立即報名
-    </a>
+    <script>
+        function downloadPoster() {
+            const captureArea = document.getElementById('capture-area');
+            const btn = document.getElementById('download-btn');
+
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '⏳ 處理中，請稍候...';
+            btn.style.opacity = '0.8';
+            btn.disabled = true;
+
+            html2canvas(captureArea, {
+                scale: 2,
+                useCORS: true,
+                backgroundColor: '#f8f9f3'
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/jpeg', 0.95);
+
+                const link = document.createElement('a');
+                link.download = '2026創思優語_115暑期營隊海報.jpg';
+                link.href = imgData;
+                link.click();
+
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+            }).catch(err => {
+                console.error('產生圖片時發生錯誤:', err);
+                alert('抱歉，產生圖片失敗，請稍後再試！');
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+            });
+        }
+    </script>
 
 </body>
 
