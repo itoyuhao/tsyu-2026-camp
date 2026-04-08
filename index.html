@@ -131,6 +131,11 @@
 
 <body>
 
+    <button id="download-btn" onclick="downloadPoster()" data-html2canvas-ignore="true"
+        class="fixed top-4 right-4 md:top-8 md:right-8 z-50 bg-[#dd907b] text-white px-5 py-3 rounded-full shadow-lg hover:bg-[#c0654c] hover:shadow-xl transition-all font-bold flex items-center gap-2 border-2 border-white cursor-pointer">
+        📸 下載 JPG 海報
+    </button>
+
     <div id="capture-area" class="relative p-4 md:p-8 w-full overflow-hidden">
 
         <div class="absolute top-32 left-10 text-5xl opacity-20 floating-icon hidden lg:block">🌱</div>
@@ -174,10 +179,17 @@
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                             安心陪伴與桌遊營（三日） 🎲
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">涵蓋自我探索、生物演化、數學策略。含暑期作業指導，最後一天預計安排<span
-                                class="text-[#dd907b] font-bold border-b-2 border-[#dd907b]">烘焙課程 🧁</span>。</p>
-                        <div class="flex items-center gap-2">
-                            <span class="badge badge-salmon">適合對象：升小三以上</span>
+                        <div
+                            class="mb-3 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                            <span class="font-bold">👩‍🏫 授課教師：</span>
+                            <span class="text-gray-600 font-medium">家瑀老師｜助教：邑筠老師</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">涵蓋自我探索、生物演化、數學策略...等。含暑期作業指導，最後一天<span
+                                class="text-[#dd907b] font-bold border-b-2 border-[#dd907b]">預計安排烘焙課程 🧁</span>。</p>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-salmon">適合年級：升小三以上</span>
+                            <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥 人數：限額<span
+                                    class="text-red-600 font-black text-sm mx-0.5">12</span>位</span>
                         </div>
                     </div>
                 </div>
@@ -192,12 +204,19 @@
                     <div class="md:w-3/4">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex flex-wrap items-center gap-2">
                             財商探險家-勇闖企鵝島（初階班）🐧
-                            <span class="text-sm font-bold text-[#6a98a1]">｜開放舊生複訓（2名）/ 享半價優惠 /｜</span>
+                            <span class="text-sm font-bold text-[#6a98a1]">｜開放舊生複訓（至多4名）/ 享半價優惠 /｜</span>
                         </h3>
+                        <div
+                            class="mb-3 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                            <span class="font-bold">👩‍🏫 授課教師：</span>
+                            <span class="text-gray-600 font-medium">健平老師、家瑀老師</span>
+                        </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            透過家瑀老師與健平老師共同設計的策略桌遊與搭配安排沉浸式情境，培養孩子的金錢邏輯、規劃財務藍圖，並建立風險意識與資產管理能力。</p>
-                        <div class="flex items-center gap-2">
-                            <span class="badge badge-teal">適合對象：升小五以上 (升小四可評估)</span>
+                            透過共同設計的策略桌遊與搭配安排沉浸式情境，培養孩子的金錢邏輯、規劃財務藍圖，並建立風險意識與資產管理能力。</p>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-teal">適合年級：升小五以上 (升小四可評估)</span>
+                            <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥 人數：新生限額<span
+                                    class="text-red-600 font-black text-sm mx-0.5">6</span>位</span>
                         </div>
                     </div>
                 </div>
@@ -211,11 +230,19 @@
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                            語文好好玩與黏土動畫營 🎬
+                            文字好好玩與黏土動畫營 🎬
                         </h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">踏上語文探索的奇幻旅程，結合文學敘事與動手捏塑，引導孩子親手製作屬於自己的停格動畫作品。</p>
-                        <div class="flex items-center gap-2">
-                            <span class="badge badge-yellow">適合對象：升小三以上</span>
+                        <div
+                            class="mb-3 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                            <span class="font-bold">👩‍🏫 授課教師：</span>
+                            <span class="text-gray-600 font-medium">家瑀老師｜助教：邑筠老師</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            踏上探索文字的奇幻旅程，結合國語文敘事自編劇本與動手捏塑，培養孩子喜歡國語文的興趣，引導孩子親手製作屬於自己的停格動畫作品。</p>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-yellow">適合年級：升小三以上</span>
+                            <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥 人數：限額<span
+                                    class="text-red-600 font-black text-sm mx-0.5">8</span>位</span>
                         </div>
                     </div>
                 </div>
@@ -231,10 +258,17 @@
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                             媒體識讀與議題探究營 🌍
                         </h3>
+                        <div
+                            class="mb-3 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                            <span class="font-bold">👩‍🏫 授課教師：</span>
+                            <span class="text-gray-600 font-medium">家瑀老師｜助教：邑筠老師</span>
+                        </div>
                         <p class="text-gray-600 mb-3 leading-relaxed">模擬聯合國形式，培養媒體識讀、國際觀、深度思辨力與現代必備的訊息查核能力。</p>
                         <div class="flex flex-wrap items-center gap-2">
-                            <span class="badge badge-salmon">適合對象：升小五以上（升小四可評估）</span>
+                            <span class="badge badge-salmon">適合年級：升小五以上（升小四可評估）</span>
                             <span class="badge bg-white text-[#dd907b] border border-[#dd907b]">#模擬聯合國</span>
+                            <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥 人數：限額<span
+                                    class="text-red-600 font-black text-sm mx-0.5">10</span>位</span>
                         </div>
                     </div>
                 </div>
@@ -267,8 +301,18 @@
                                 <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                                     ☀️ 上午｜植感實驗室-我的第一本植物解碼書 🌿
                                 </h3>
-                                <p class="text-gray-600 leading-relaxed">
+                                <div
+                                    class="mb-2 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                                    <span class="font-bold">👩‍🏫 授課教師：</span>
+                                    <span class="text-gray-600 font-medium">紫瑄老師、家瑀老師</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-2">
                                     帶領孩子走入自然，透過實作與觀察解開植物生長的奧秘，培養自然觀察者素養，並製作專屬的觀察解碼書。</p>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="badge badge-teal">適合年級：升小四以上（升小三可評估）</span>
+                                    <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥
+                                        人數：限額<span class="text-red-600 font-black text-sm mx-0.5">12</span>位</span>
+                                </div>
                             </div>
 
                             <div class="border-t-2 border-dashed border-[#6a98a1] opacity-20"></div>
@@ -277,12 +321,19 @@
                                 <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                                     🌙 下午｜「智」能探索營-AI x 時間管理 x 情緒偵探社 🤖
                                 </h3>
-                                <p class="text-gray-600 leading-relaxed">結合最新 AI
+                                <div
+                                    class="mb-2 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                                    <span class="font-bold">👩‍🏫 授課教師：</span>
+                                    <span class="text-gray-600 font-medium">家瑀老師、紫瑄老師</span>
+                                </div>
+                                <p class="text-gray-600 leading-relaxed mb-2">結合最新 AI
                                     科技應用、時間規劃技巧與心理情緒覺察，全方位提升孩子的未來數位素養與自我管理能力。</p>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="badge badge-teal">適合年級：升小四以上（升小三可評估）</span>
+                                    <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥
+                                        人數：限額<span class="text-red-600 font-black text-sm mx-0.5">12</span>位</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="badge badge-teal">適合對象：升小四以上</span>
                         </div>
                     </div>
                 </div>
@@ -297,9 +348,16 @@
                         <h3 class="text-2xl font-bold text-gray-800 mb-2 flex items-center gap-2">
                             科學探究營-微生物的世界 🦠
                         </h3>
+                        <div
+                            class="mb-3 text-sm text-gray-700 flex items-center gap-2 bg-white/80 w-max px-3 py-1 rounded-md border border-gray-100 shadow-sm">
+                            <span class="font-bold">👩‍🏫 授課教師：</span>
+                            <span class="text-gray-600 font-medium">紫瑄老師｜助教：家瑀老師</span>
+                        </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">揭開微觀世界的神秘面紗，親手操作培養科學觀察與實驗精神。</p>
-                        <div class="flex items-center gap-2">
-                            <span class="badge badge-yellow">適合對象：升小四以上</span>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="badge badge-yellow">適合年級：升小四以上（升小三可評估）</span>
+                            <span class="badge bg-white border border-gray-200 text-gray-600 shadow-sm">👥 人數：限額<span
+                                    class="text-red-600 font-black text-sm mx-0.5">12</span>位</span>
                         </div>
                     </div>
                 </div>
@@ -326,7 +384,6 @@
                                 報名<br>QR CODE
                             </div>
                         </div>
-                        ㄇ
                     </div>
                 </div>
                 <div
