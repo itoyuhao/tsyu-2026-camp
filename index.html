@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>創思優語 115暑期營隊</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -130,11 +129,6 @@
 </head>
 
 <body>
-
-    <button id="download-btn" onclick="downloadPoster()" data-html2canvas-ignore="true"
-        class="fixed top-4 right-4 md:top-8 md:right-8 z-50 bg-[#dd907b] text-white px-5 py-3 rounded-full shadow-lg hover:bg-[#c0654c] hover:shadow-xl transition-all font-bold flex items-center gap-2 border-2 border-white cursor-pointer">
-        📸 下載 JPG 海報
-    </button>
 
     <div id="capture-area" class="relative p-4 md:p-8 w-full overflow-hidden">
 
@@ -398,40 +392,6 @@
         </div>
     </div>
 
-    <script>
-        function downloadPoster() {
-            const captureArea = document.getElementById('capture-area');
-            const btn = document.getElementById('download-btn');
-
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '⏳ 處理中，請稍候...';
-            btn.style.opacity = '0.8';
-            btn.disabled = true;
-
-            html2canvas(captureArea, {
-                scale: 2,
-                useCORS: true,
-                backgroundColor: '#f8f9f3'
-            }).then(canvas => {
-                const imgData = canvas.toDataURL('image/jpeg', 0.95);
-
-                const link = document.createElement('a');
-                link.download = '2026創思優語_115暑期營隊海報.jpg';
-                link.href = imgData;
-                link.click();
-
-                btn.innerHTML = originalText;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }).catch(err => {
-                console.error('產生圖片時發生錯誤:', err);
-                alert('抱歉，產生圖片失敗，請稍後再試！');
-                btn.innerHTML = originalText;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            });
-        }
-    </script>
 
 </body>
 
